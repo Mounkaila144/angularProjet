@@ -1,0 +1,88 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+
+  <mat-grid-tile>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Text à Chiffré</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field style="background: #ffffff;width: 450px;height: 100px" appearance="fill">
+              <textarea style="color: black" matInput [(ngModel)]="text"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+
+        <h1 style="margin-left: 30px">clé</h1>
+        <input
+          style="margin-left: 20px;font-size: 20px;background-color: white;color: red;border-radius: 10px;height: 30px;width: 400px"
+          matInput [(ngModel)]="clec" type="text">
+
+      </mat-card-footer>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Text à Dehiffré</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field style="background: #ffffff;width: 450px" appearance="fill">
+              <textarea style="color: black" matInput [(ngModel)]="crypto"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <h1 style="margin-left: 30px">clé</h1>
+        <input
+          style="margin-left: 20px;font-size: 20px;background-color: white;color: red;border-radius: 10px;height: 30px;width: 400px"
+          matInput [(ngModel)]="cled" type="text">
+      </mat-card-footer>
+    </mat-card>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile>
+
+
+    <mat-card class="shipping-carde">
+      <mat-card-header>
+        <mat-card-title><h2 style="color: #e5da07">Cryptograme</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <h1>{{ vignereChiffrement(text.toUpperCase(),clec)}}</h1>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+
+    <mat-card class="shipping-carde">
+      <mat-card-header>
+        <mat-card-title><h2 style="color: #e5da07">Text Claire</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <h1 style="color: chartreuse">{{vignereDehiffrement(crypto.toUpperCase(), cled)}}</h1>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+
+</mat-grid-list>
+
+
+

@@ -1,12 +1,11 @@
 header {
   text-align: center;
-  background-color: #EEE;
   margin-bottom: 20px;
   padding: 10px;
 }
 a {
-  margin: 0 10px;
-  color: #333;
+  margin: 0 30px;
+  color: #000000;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -14,6 +13,10 @@ a {
 }
 
 .active {
-  color: #666;
+  color: #ffffff;
   text-decoration: underline;
+}
+.center{
+  display: flex;
+  justify-content: center;
 }

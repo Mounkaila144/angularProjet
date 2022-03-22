@@ -1,0 +1,43 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+
+
+  <mat-grid-tile>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Text à Decrypté</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field style="background: #ffffff;width: 500px" appearance="fill">
+              <textarea style="color: black;height: 250px" matInput [(ngModel)]="crypto"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="example-container mat-elevation-z8">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th ><h2 style="color:white; ">clé</h2></th>
+          <th ><h2 style="color:white; ">Decryptage</h2></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]">
+          <td style="background-color: rgb(66,2,34);color: white">{{i}}</td>
+          <td style="background-color: #ffffff">{{cesarDeryptage(this.crypto.toUpperCase(),i)}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-grid-tile>
+
+
+
+</mat-grid-list>
