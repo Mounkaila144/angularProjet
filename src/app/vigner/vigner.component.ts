@@ -22,11 +22,11 @@ export class VignerComponent implements OnInit {
     return index;
   }
   ngOnInit(): void {
-    this.text = 'ZZZZZZZZZZZ'
+    this.text = 'Bonjour Monsieux Sirajie je te transmetre la lettre ci dessous'
     this.lgtext = this.text.length
     this.crypto = ''
-    this.clec = '1,2,3,4,5'
-    this.cled = '1,2,3,4,5'
+    this.clec = 'Mado'
+    this.cled = 'Mad'
     this.d=Array(this.lblock)
   }
 
@@ -79,10 +79,10 @@ export class VignerComponent implements OnInit {
   }
 
   vignereChiffrement(text: string, cle: string) {
-    let c=Array.from(cle.split(','),Number)
+    let c=this.caractereToNumber(cle)
     let n = this.caractereToNumber(text)
     let k = []
-    let lgcle = cle.length
+    let lgcle = c.length
     if (lgcle <= text.length) {
       for (let i = 0; i <= text.length; i++) {
         k.push(c)
@@ -109,10 +109,10 @@ export class VignerComponent implements OnInit {
   }
 
   vignereDehiffrement(text: string, cle: string) {
-    let c=Array.from(cle.split(','),Number)
+    let c=this.caractereToNumber(cle)
     let n = this.caractereToNumber(text)
     let k = []
-    let lgcle = cle.length
+    let lgcle = c.length
     if (lgcle <= text.length) {
       for (let i = 0; i <= text.length; i++) {
         k.push(c)

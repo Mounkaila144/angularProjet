@@ -59,7 +59,7 @@
       <mat-card-content>
         <div class="row">
           <div class="col">
-            <h1>{{ vignereChiffrement(text.toUpperCase(),clec)}}</h1>
+            <h1>{{ vignereChiffrement(text.toUpperCase(),clec.toUpperCase()).toLocaleLowerCase()}}</h1>
           </div>
         </div>
       </mat-card-content>
@@ -74,7 +74,7 @@
       <mat-card-content>
         <div class="row">
           <div class="col">
-            <h1 style="color: chartreuse">{{vignereDehiffrement(crypto.toUpperCase(), cled)}}</h1>
+            <h1 style="color: chartreuse">{{vignereDehiffrement(crypto.toUpperCase(), cled.toUpperCase()).toLocaleLowerCase()}}</h1>
           </div>
         </div>
       </mat-card-content>
